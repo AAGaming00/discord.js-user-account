@@ -2,7 +2,8 @@
 
 const https = require('https');
 const FormData = require('@discordjs/form-data');
-const fetch = require('node-fetch');
+const { AbortController, abortableFetch } = require('abortcontroller-polyfill/dist/cjs-ponyfill');
+const { fetch } = abortableFetch(require('node-fetch'));
 const { UserAgent } = require('../util/Constants');
 
 let agent = null;
