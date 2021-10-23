@@ -17,8 +17,10 @@ module.exports = (client, { d: data }, shard) => {
     client.guilds._add(guild);
   }
 
-  if (client.application) {
+  if (client.application && !client.options.loginAsUserAccount) {
     client.application._patch(data.application);
+  } else if (client.options.loginAsUserAccount) {
+    client.application = null;
   } else {
     client.application = new ClientApplication(client, data.application);
   }
