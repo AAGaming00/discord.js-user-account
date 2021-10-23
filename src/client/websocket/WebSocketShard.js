@@ -605,7 +605,11 @@ class WebSocketShard extends EventEmitter {
       token: client.token,
       shard: [this.id, Number(client.options.shardCount)],
     };
-
+    if (client.options.loginAsUserAccount) {
+      delete d.intents;
+      delete d.shard;
+      d.capabilities = 125;
+    }
     this.debug(`[IDENTIFY] Shard ${this.id}/${client.options.shardCount} with intents: ${d.intents}`);
     this.send({ op: Opcodes.IDENTIFY, d }, true);
   }
