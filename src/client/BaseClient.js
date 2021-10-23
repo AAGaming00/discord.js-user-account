@@ -1,6 +1,6 @@
 'use strict';
 
-const EventEmitter = require('node:events');
+const EventEmitter = require('events');
 const RESTManager = require('../rest/RESTManager');
 const Options = require('../util/Options');
 const Util = require('../util/Util');

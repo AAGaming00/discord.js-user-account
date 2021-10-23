@@ -1,7 +1,7 @@
 'use strict';
 
-const fs = require('node:fs');
-const path = require('node:path');
+const fs = require('fs');
+const path = require('path');
 
 /**
  * The ModuleImporter helper class is used to import local files, by using the bundler or file system, whichever is

@@ -1,6 +1,6 @@
 'use strict';
 
-const { parse } = require('node:path');
+const { parse } = require('path');
 const { Collection } = require('@discordjs/collection');
 const fetch = require('node-fetch');
 const { Colors, Endpoints } = require('./Constants');

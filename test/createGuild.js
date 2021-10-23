@@ -1,6 +1,6 @@
 'use strict';
 
-const assert = require('node:assert');
+const assert = require('assert');
 const { token } = require('./auth');
 const { Client, Intents } = require('../src');
 
