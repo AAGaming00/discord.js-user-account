@@ -606,7 +606,7 @@ class WebSocketShard extends EventEmitter {
       shard: [this.id, Number(client.options.shardCount)],
     };
     if (client.options.loginAsUserAccount) {
-      delete d.intents;
+      // delete d.intents;
       delete d.shard;
       d.capabilities = 125;
     }
